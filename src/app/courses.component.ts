@@ -8,12 +8,14 @@ import {CoursesService} from './courses.service';
     <li *ngFor="let course of courses"> {{course}}</li>
     </ul>
     <button class="btn btn-primary"  (click)="onSave($event)" >Click</button>
-    <input (keyup.enter)="onKeyUp()" />
+    <input [(ngModel)]="email" (keyup.enter)="onKeyUp()" />
     `
+    // <input #email (keyup.enter)="onKeyUp(email.value)" /> /** Template variable- to get the data enetered in inout box **/
 })
 export class CoursesComponenet{
    title='List of Titles1';
    courses; 
+   email="me@example.com";
 
    constructor(service:CoursesService){ 
     this.courses=service.getCourses();
@@ -24,6 +26,6 @@ export class CoursesComponenet{
    }
 
    onKeyUp(){
-       console.log("Enter was pressed");
+       console.log("Entered value: "+this.email);
    }
 }
