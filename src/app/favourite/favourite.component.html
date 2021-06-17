@@ -1,0 +1,6 @@
+<br />
+<!-- <i class=" {{ 'bi '+currentFavouriteClass}}" (click)="onFavouriteClick($event)"></i> -->
+
+<i class="bi" [class.bi-star-fill]="isFavourite" [class.bi-star]="!isFavourite" (click)="onFavouriteClick($event)"></i>
+
+<h2>favourite</h2>

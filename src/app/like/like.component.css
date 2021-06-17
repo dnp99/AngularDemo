@@ -1,0 +1,14 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+.bi-heart-fill{
+    color: deeppink;
+    padding-right: 2px;
+    cursor: pointer;
+}
+
+.bi-heart{
+    color: #ccc;
+    padding-right: 2px;
+    cursor: pointer;
+}
